@@ -2,32 +2,50 @@
 
 //crea aqui la clase Moto junto con dos propiedades public
 class Moto{
-	//declaracion de propiedades
-	public $color;
-	public $marca;
+    //declaracion de propiedades
+    public $color;
+    public $marca;
 }
+
 //crea aqui la instancia o el objeto de la clase Moto
 $moto1 = new Moto;
-//inicializamos el mensaje que lanzara el servidor con vacio
- if ( !empty($_POST)){
 
- 	 // recibe aqui los valores mandados por post y arma el mensaje para front 
- }  
+// Verifica si la solicitud es POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtén los valores de los atributos desde la solicitud POST
+    $moto1->color = $_POST['color'];
+    $moto1->marca = $_POST['marca'];
+
+    // Construye el mensaje concatenando los valores de los atributos
+    $mensaje = "La moto es de color " . $moto1->color . " y de marca " . $moto1->marca . ".";
+}
+?>
 
 
-//Dos nuevos inputs con su respectivo label dentro del formulario
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Formulario</title>
+    <meta charset="UTF-8">
+    <title>Ejercicio Moto</title>
 </head>
 <body>
-	<form method="post">
-	<input type="text" name="color" placeholder="color">
-	<input type="text" name="marca" placeholder="marca">
-	<input type="submit" value="enviar">
-	</form>
+	<h1>Moto</h1>
+	<p>Ingresa la siguiente informacion de la moto: </p>
+    <form method="post" action="">
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" required>
+        <br>
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" required>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <?php
+    // Muestra el mensaje si está definido en un inptu de solo lectura
+    if (isset($mensaje)) {
+        echo '<input type="text" value="' . ($mensaje) . '" readonly>';
+    }
+    ?>
 </body>
 </html>
