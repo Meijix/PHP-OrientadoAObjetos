@@ -3,6 +3,7 @@
 class Carro{
 	//declaracion de propiedades
 	public $color;
+	public $marca;
 }
 
 //inicializamos el mensaje que lanzara el servidor con vacio
