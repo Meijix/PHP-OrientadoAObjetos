@@ -26,47 +26,6 @@ include_once('transporte.php');
 		}
 	} 
 
-	class avion extends transporte{
-
-		private $numero_turbinas;
-		
-		//sobreescritura de constructor
-		public function __construct($nom,$vel,$com,$tur){
-			parent::__construct($nom,$vel,$com);
-			$this->numero_turbinas=$tur;
-		}
-
-		// sobreescritura de metodo
-		public function resumenAvion(){
-			$mensaje=parent::crear_ficha();
-			$mensaje.='<tr>
-						<td>Numero de turbinas:</td>
-						<td>'. $this->numero_turbinas.'</td>				
-					</tr>';
-			return $mensaje;
-		}
-	}
-
-	class barco extends transporte{
-		private $calado;
-
-		//sobreescritura de constructor
-		public function __construct($nom,$vel,$com,$cal){
-			parent::__construct($nom,$vel,$com);
-			$this->calado=$cal;
-		}
-
-		// sobreescritura de metodo
-		public function resumenBarco(){
-			$mensaje=parent::crear_ficha();
-			$mensaje.='<tr>
-						<td>Calado:</td>
-						<td>'. $this->calado.'</td>				
-					</tr>';
-			return $mensaje;
-		}
-	}
-
 $mensaje='';
 
 
