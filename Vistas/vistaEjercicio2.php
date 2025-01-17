@@ -29,7 +29,11 @@ include_once('../clases/ejercicio2/Carro2.php');
 			<label class="col-sm-2 pl-md-5 " for="CajaTexto2">Modelo:</label>
 			 <div class="col-sm-4 pl-lg-1" >
 					<input class="form-control" type="text" name="modelo" id="CajaTexto2">
-			</div>			
+			</div>
+			
+			<label class="col-sm-2 pl-md-5 " for="CajaTexto3">Año:</label>
+			 <div class="col-sm-4 pl-lg-1" >
+					<input class="form-control" type="int" name="year" id="CajaTexto3">
 		</div>
 		<button class="btn btn-primary" type="submit" >enviar</button>
 		<a class="btn btn-link offset-md-9 offset-lg-9 offset-7" href="../index.php">Regresar</a>
@@ -57,6 +61,16 @@ include_once('../clases/ejercicio2/Carro2.php');
 						<td><?='Modelo:'?></td>
 						<td><?=$Carro1->modelo?></td>
 												
+					</tr>
+
+					<tr>
+						<td><?='Año:'?></td>
+						<td><?=$Carro1->year?></td>
+					</tr>
+
+					<tr>
+						<td><?='Verificación:'?></td>
+						<td><?=$Carro1->getVerificado()?></td>
 					</tr>
 					
 			</tbody>
