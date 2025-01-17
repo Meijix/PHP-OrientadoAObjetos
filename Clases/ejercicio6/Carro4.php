@@ -1,5 +1,9 @@
 <?php  
 include_once('transporte.php');
+include_once('bicicleta.php');
+include_once('barco.php');
+include_once('avion.php');
+
 
 	//declaracion de la clase hijo o subclase Carro
 	class carro extends transporte{
@@ -44,7 +48,10 @@ if (!empty($_POST)){
 		case 'maritimo':
 			$bergantin1= new barco('bergantin','40','na','15');
 			$mensaje=$bergantin1->resumenBarco();
-			break;		
+			break;
+		case 'bicicleta':
+			$bicicleta1= new bicicleta('bicicleta','20','pedales','26');
+			$mensaje=$bicicleta1->resumenBicicleta();
 	}
 
 }

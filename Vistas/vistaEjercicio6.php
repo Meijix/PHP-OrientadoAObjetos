@@ -1,5 +1,9 @@
 <?php  
-include_once('../clases/ejercicio6/Carro4.php');
+include_once('../Clases/ejercicio6/Carro4.php');
+include_once('../Clases/ejercicio6/avion.php');
+include_once('../Clases/ejercicio6/bicicleta.php');
+include_once('../Clases/ejercicio6/barco.php');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,6 +31,7 @@ include_once('../clases/ejercicio6/Carro4.php');
 							<option value='aereo' >Aereo</option>
 							<option value='terrestre' >Terrestre</option>
 							<option value='maritimo' >Maritimo</option>
+							<option value='bicicleta' >Bicicleta</option>
 						</select>
 					</div>
 
@@ -47,7 +52,6 @@ include_once('../clases/ejercicio6/Carro4.php');
 		    </thead>
 		    <tbody>
 			<?= $mensaje; ?>
-
 			</tbody>
 		</table>
 
