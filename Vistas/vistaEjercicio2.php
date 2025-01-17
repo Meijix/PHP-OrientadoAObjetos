@@ -70,6 +70,7 @@ include_once('../clases/ejercicio2/Carro2.php');
 
 					<tr>
 						<td><?='Verificación:'?></td>
+						<!-- El resultado de estatus de la verificacion NO ES CORRECTO-->
 						<td><?=$Carro1->getVerificado()?></td>
 					</tr>
 					
