@@ -22,6 +22,7 @@
 	<div class="container" style="margin-top: 4em">
 		<div class="row px-md-4 mb-4">
 		<h1>Curso de php orientado a objetos</h1>
+		<h2>Natalia Edith Mejia Bautista</h2>
 		</div>
 		<div class="list-group row">
 			
